@@ -29,9 +29,14 @@ ok(my $gac = Genealogy::AncestorChart->new( people => \%people ),
 isa_ok($gac, 'Genealogy::AncestorChart');
 is(keys %{$gac->people}, 7, 'Right number of people');
 
-is $gac->count_rows, 4, 'Right number of rows';
+my @rows = $gac->rows;
+is $gac->num_rows, scalar @rows, 'Correct number of rows';
 
-use Data::Dumper;
-diag Dumper $gac->rows;
+is $gac->num_cols, 3, 'Correct number of cols';
+
+is_deeply $gac->table_headers, [qw/Person Parents Grandparents/],
+  'Got correct headers';
+
+diag $gac->chart;
 
 done_testing;
