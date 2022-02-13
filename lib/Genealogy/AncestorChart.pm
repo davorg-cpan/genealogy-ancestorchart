@@ -76,19 +76,19 @@ produced, but it won't be guaranteed to be valid HTML.
 In the future, I might introduce a "strict" mode that only allows a valid
 number of people in the array.
 
-=item label_method
+=item * label_method
 
 This is the name of the method that should be called on the objects in the
 "people" array. The default value is C<display_name>.
 
-=item headers
+=item * headers
 
 An array reference containing the list of titles that are used for the first
 few columns in the table. The default list is 'Person', 'Parents',
 'Grandparents' and 'Great Grandparents'. You might want to override this if,
 for example, you want the output in a different language.
 
-=item extra_headers
+=item * extra_headers
 
 A string containing the basis for an extra headers that are required after
 the fixed list stored in C<headers>. In English, we use the terms

@@ -37,6 +37,6 @@ is $gac->num_cols, 3, 'Correct number of cols';
 is_deeply $gac->table_headers, [qw/Person Parents Grandparents/],
   'Got correct headers';
 
-diag $gac->chart;
+# diag $gac->chart;
 
 done_testing;
