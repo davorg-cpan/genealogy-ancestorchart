@@ -109,7 +109,7 @@ package Genealogy::AncestorChart;
 use strict;
 use warnings;
 
-our $VERSION = '0.0.1';
+our $VERSION = '0.0.2';
 
 use Moo;
 use Types::Standard qw[ArrayRef HashRef Str Object];
@@ -271,7 +271,7 @@ sub table_headers {
   } else {
     @headers = @{ $self->headers };
     my $gt = 2;
-    for (@headers .. $self->num_cols) {
+    for (@headers .. $self->num_cols - 1) {
       push @headers, $gt++ . ' ' . $self->extra_header;
     }
   }
