@@ -4,7 +4,7 @@ package Person;
 
 sub new {
   my $class = shift;
-  return bless { display_name => $_[0] };
+  return bless { display_name => $_[0] }, $class;
 }
 
 sub display_name {
