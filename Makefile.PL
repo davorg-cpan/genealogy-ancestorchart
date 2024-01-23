@@ -19,11 +19,11 @@ WriteMakefile(
         resources => {
             repository => {
                 type => 'git',
-                url => 'git://github.com/davorg/genealogy-ancestorchart.git',
-                web => 'https://github.com/davorg/genealogy-ancestorchart',
+                url => 'git://github.com/davorg-cpan/genealogy-ancestorchart.git',
+                web => 'https://github.com/davorg-cpan/genealogy-ancestorchart',
             },
             bugtracker => {
-                web => 'https://github.com/davorg/genealogy-ancestorchart/issues',
+                web => 'https://github.com/davorg-cpan/genealogy-ancestorchart/issues',
             },
         },
     },
